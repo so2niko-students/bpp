@@ -136,3 +136,21 @@ function random2Numbers(from = 0, to = 100){
 const { a, b } = random2Numbers();
 // console.log(a3, b4);
 console.log(a, b);
+
+dog.parent = {
+    name : 'Батько Патрона'
+}
+
+const dogStr = JSON.stringify(dog);
+const dogFromJSON = JSON.parse(dogStr);
+
+const dogCopy = Object.assign({}, dog);
+dogCopy.name = 'dogCopy';
+dogCopy.parent.name = 'hahaha'
+console.log(dogCopy, dog, dogFromJSON);
+
+function rec(){
+    rec();
+}
+
+rec();
